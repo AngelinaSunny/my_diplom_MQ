@@ -1,0 +1,767 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url(/fonts/OpenSans-Bold.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url(/fonts/OpenSans-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*-------------Общие стили--------------*/
+/*шапка*/
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.link-nav {
+  font: 13px "OpenSans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #fff;
+}
+
+.link-nav:hover {
+  border-bottom: 2px solid white;
+}
+
+.main-header {
+  position: relative;
+  width: 100vw;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #1c2c34;
+
+  z-index: 0;
+}
+
+.main-header::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.logo-nav {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 40vh;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.title-head {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Общие стили в тренде*/
+
+.trend-header,
+.trend-post,
+.main-tegs {
+  display: flex;
+}
+
+.trend-header {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.trend-post {
+  align-items: flex-end;
+  width: 100%;
+}
+
+.trend-post-wrap {
+  width: 91.66vw;
+  margin: 4.17vw;
+  padding: 30px 20px;
+  border: 3px solid #dcd2b8;
+}
+
+.trend-header-title,
+.trend-post,
+.teg,
+.title-news,
+.caption-new-post {
+  text-transform: uppercase;
+}
+
+.trend-header-title,
+.trend-post {
+  font-size: 1rem;
+}
+
+.teg {
+  font-size: 0.875em;
+
+  color: #b59f5b;
+  font-weight: 700;
+}
+
+.teg:hover {
+  border-bottom: 2px solid #dcd2b8;
+}
+
+.main-tegs {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-teg:not(:last-child) {
+  margin-right: 14px;
+}
+
+.trend-post {
+  position: relative;
+  margin-bottom: 3px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
+
+.trend-post::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.post-one {
+  background-image: url(/images/trend1.jpg);
+}
+
+.post-two {
+  background-image: url(/images/trend2.jpg);
+}
+
+.post-three {
+  background-image: url(/images/trend3.jpg);
+}
+
+.post-four {
+  background-image: url(/images/trend4.jpg);
+}
+
+/*Общие стили основной контент*/
+/*Общие стили блок с постами*/
+
+.data,
+.name,
+.data-new-post,
+.site-info,
+.index,
+.list-teg {
+  font: 0.75rem "Open Sans", sans-serif;
+}
+
+.data {
+  margin-right: 10px;
+
+  font-weight: 400;
+  color: #888888;
+}
+
+.name {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/*Общие стили новые посты*/
+
+.caption {
+  position: relative;
+  margin: 0;
+  padding-bottom: 15px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.caption::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 14px;
+
+  width: 61px;
+  border-bottom: 3px solid #e1d9bd;
+}
+
+.container {
+  display: flex;
+  margin-top: 22px;
+}
+
+.data-new-post {
+  color: #888888;
+}
+
+.caption-new-post {
+  font: 14px/1.2 "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+/*Общие стили форма поиска и рассылка*/
+
+.search {
+  display: flex;
+  margin-top: 55px;
+  align-items: center;
+}
+
+.hydden-text-form {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.search-input,
+.search-button,
+.email-input,
+.email-button {
+  vertical-align: middle;
+  outline: none;
+  border: none;
+}
+
+.search-input {
+  margin-right: 0;
+  padding: 1px;
+  background-color: #f4f7f6;
+}
+
+.search-input::placeholder {
+  color: #939594;
+}
+
+.search-input:focus {
+  border: 2px #b59f5b solid;
+}
+
+.search-button {
+  padding: 0;
+
+  background-image: url(/svg/search.svg);
+  background-color: #b59f5b;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #323232;
+}
+
+.email-form {
+  margin-top: 55px;
+}
+
+.email-input,
+.email-button {
+  width: 100%;
+}
+
+.email-input {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 1px;
+
+  background-color: #f4f7f6;
+}
+
+.email-input:focus {
+  border: 2px #b59f5b solid;
+}
+
+.email-input::placeholder {
+  color: #939594;
+}
+
+.email-button {
+  font: 14px/1.2 "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #b59f5b;
+  cursor: pointer;
+}
+
+.email-button:hover {
+  background-color: #323232;
+}
+
+/*Общие стили список тегов*/
+
+.tegs {
+  box-sizing: border-box;
+}
+
+.list-tegs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 17px;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.list-teg-link {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 7px;
+}
+
+.list-teg {
+  display: block;
+  padding: 7px 13px;
+
+  border: 2px solid #eeeeee;
+
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.list-teg:hover {
+  border: 2px solid #b59f5b;
+}
+
+/*Общие стили список тем*/
+.topics {
+  margin-top: 60px;
+}
+
+.list-topics {
+  padding-top: 21px;
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.list-topic {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 2px solid #eeeeee;
+  font-weight: 700;
+}
+
+.list-topic > .link:hover {
+  color: #b59f5b;
+}
+
+.index {
+  vertical-align: super;
+  margin-left: 5px;
+
+  font-weight: 700;
+  color: #b59f5b;
+}
+
+/*Общие стили блок с товарами*/
+
+/*общие стили подвал*/
+/*общие стили соцсети*/
+.footer-page {
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+.adress {
+  display: flex;
+  justify-content: center;
+
+  background-color: #f4f7f6;
+}
+
+.socials {
+  display: flex;
+  list-style-type: none;
+  margin: 28px 0;
+  padding: 0;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 17px;
+}
+
+.social-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #f4f7f6;
+}
+
+.social-link-twitter {
+  background-image: url("/svg/004-twitter.svg");
+}
+
+.social-link-pinterest {
+  background-image: url("/svg/001-pinterest.svg");
+}
+
+.social-link-facebook {
+  background-image: url("/svg/002-facebook-logo.svg");
+}
+
+.social-link-instargam {
+  background-image: url("/svg/005-instagram.svg");
+}
+
+.social-link-tumblr {
+  background-image: url("/svg/003-tumblr.svg");
+}
+
+.site-info {
+  color: #888;
+}
+
+/*--------------мобильные телефоны-----------------*/
+
+@media (max-width: 640px) {
+  /*шапка мобилки*/
+
+  .main-header {
+    padding-top: 5vh;
+    min-height: 100vh;
+
+    background-image: url(/images/banner-mobile.jpg);
+  }
+
+  .link-nav {
+    font-size: 0.8125rem;
+    margin-right: 9.3%;
+    display: none;
+  }
+
+  .link-nav:nth-child(-n + 2) {
+    display: none;
+  }
+
+  .logo {
+    margin-bottom: 40px;
+    width: 75vw;
+  }
+
+  .title-head {
+    font-size: 1.625rem;
+    max-width: 81vw;
+  }
+
+  /*в тренде мобилки*/
+  .trend-header {
+    min-height: 5.94em;
+  }
+
+  .trend-header-title {
+    font-size: 1rem;
+    position: relative;
+
+    padding-bottom: 12px;
+  }
+
+  .trend-header-title::before {
+    content: "";
+    position: absolute;
+    width: 4.06em;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    border-bottom: 3px solid #dcd2b8;
+  }
+
+  .trend-post {
+    min-height: 64vw;
+    vertical-align: bottom;
+  }
+
+  .title-trend {
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  /*Основной контент мобилки*/
+  .content,
+  .shop {
+    margin-right: 4.17vw;
+    margin-left: 4.17vw;
+  }
+
+  /*Блок с постами мобилки*/
+
+  .post {
+    margin-top: 40px;
+
+    border-bottom: 3px solid #dcd2b8;
+  }
+
+  .image-post {
+    max-width: 91.66vw;
+  }
+
+  .main-tegs,
+  .image-post {
+    margin-bottom: 15px;
+  }
+
+  .text-news {
+    margin-bottom: 20px;
+  }
+
+  .title-news {
+    margin-bottom: 25px;
+
+    font-size: 1rem;
+  }
+
+  .text-news {
+    font-size: 0.875rem;
+  }
+
+  .text-news-inner {
+    margin-top: 25px;
+  }
+
+  /* Мобилки новые посты*/
+
+  .caption {
+    margin-top: 45px;
+    font-size: 1rem;
+  }
+
+  .img-new-post {
+    max-width: 19.45vw;
+    margin-right: 20px;
+  }
+
+  /*форма поиска*/
+
+  .search-input {
+    width: 77.78vw;
+  }
+
+  .search-input,
+  .search-button,
+  .email-input,
+  .email-button {
+    height: 50px;
+  }
+
+  .search-button {
+    width: 13.88vw;
+  }
+
+  /*Мобилки список тегов*/
+
+  .tegs {
+    margin-top: 43px;
+  }
+
+  /*мобилки список тем*/
+
+  .topics {
+    margin-top: 43px;
+  }
+
+  .list-topics {
+    padding-top: 10px;
+  }
+
+  /* мобилки список товаров */
+
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .product-wrap {
+    border: 3px solid #dcd2b8;
+    padding: 50px 25px 25px;
+    margin-top: -35px;
+  }
+
+  .price-byu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+  }
+
+  .title-product {
+    margin-bottom: 1em;
+    font-size: calc(17px / 1rem);
+    text-transform: uppercase;
+  }
+
+  .text-product {
+    font-weight: 400;
+    font: 0.9375rem/2.3, "Open San" sans-serif;
+  }
+
+  .shop-link {
+    color: #b59f5b;
+  }
+
+  .price-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .old-price {
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: line-through;
+  }
+
+  .new-price {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .buy-button {
+    height: 45px;
+    width: 10em;
+    font: 0.875rem/1.2 "Open Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #b59f5b;
+    border: none;
+  }
+
+  /* подвал мобилки*/
+  /*мобилки соцсети*/
+  .adress {
+    margin-top: 19.44vw;
+    margin-bottom: 22.22vw;
+  }
+
+  .footer-page {
+    padding-bottom: 22.22vw;
+  }
+}
+
+/*-------------Мобильные в горизонтальной ориентации-----------*/
+
+@media (max-width: 640px) and (orientation: landscape) {
+}
+
+/*---------------Мобилки и планшеты----------------*/
+
+@media (max-width: 1199px) {
+  /*шапка*/
+
+  .navicon {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    order: -1;
+  }
+
+  .navicon-svg {
+    margin-right: 4.2vw;
+    width: 7vw;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 88.8vw;
+  }
+
+  .logo {
+    align-self: center;
+  }
+}
+
+/*---------------планшеты--------------------------*/
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  /*шапка*/
+
+  .main-header {
+    background-image: url(/images/banner-bg-tablet.jpg);
+  }
+}
+
+/*--------------планшеты в горизонтальной ориентации-----------*/
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+}
+
+/*----------------декстоп-----------------*/
+
+@media (min-width: 1200px) {
+  /*шапка*/
+
+  .main-header {
+    padding-top: 25px;
+    padding-bottom: 145px;
+
+    background-image: url(/images/banner-bg.jpg);
+  }
+}
