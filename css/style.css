@@ -167,19 +167,19 @@
 }
 
 .post-one {
-  background-image: url(/images/trend1.jpg);
+  background-image: url(../images/trend1.jpg);
 }
 
 .post-two {
-  background-image: url(/images/trend2.jpg);
+  background-image: url(../images/trend2.jpg);
 }
 
 .post-three {
-  background-image: url(/images/trend3.jpg);
+  background-image: url(../images/trend3.jpg);
 }
 
 .post-four {
-  background-image: url(/images/trend4.jpg);
+  background-image: url(../images/trend4.jpg);
 }
 
 /*Общие стили основной контент*/
@@ -290,7 +290,7 @@
 .search-button {
   padding: 0;
 
-  background-image: url(/svg/search.svg);
+  background-image: url(../svg/search.svg);
   background-color: #b59f5b;
   background-size: 18px 18px;
   background-repeat: no-repeat;
@@ -448,23 +448,23 @@
 }
 
 .social-link-twitter {
-  background-image: url("/svg/004-twitter.svg");
+  background-image: url("../svg/004-twitter.svg");
 }
 
 .social-link-pinterest {
-  background-image: url("/svg/001-pinterest.svg");
+  background-image: url("../svg/001-pinterest.svg");
 }
 
 .social-link-facebook {
-  background-image: url("/svg/002-facebook-logo.svg");
+  background-image: url("../svg/002-facebook-logo.svg");
 }
 
 .social-link-instargam {
-  background-image: url("/svg/005-instagram.svg");
+  background-image: url("../svg/005-instagram.svg");
 }
 
 .social-link-tumblr {
-  background-image: url("/svg/003-tumblr.svg");
+  background-image: url("../svg/003-tumblr.svg");
 }
 
 .site-info {
@@ -480,7 +480,7 @@
     padding-top: 5vh;
     min-height: 100vh;
 
-    background-image: url(/images/banner-mobile.jpg);
+    background-image: url(../images/banner-mobile.jpg);
   }
 
   .link-nav {
@@ -744,7 +744,7 @@
   /*шапка*/
 
   .main-header {
-    background-image: url(/images/banner-bg-tablet.jpg);
+    background-image: url(../images/banner-bg-tablet.jpg);
   }
 }
 
@@ -762,6 +762,6 @@
     padding-top: 25px;
     padding-bottom: 145px;
 
-    background-image: url(/images/banner-bg.jpg);
+    background-image: url(../images/banner-bg.jpg);
   }
 }
