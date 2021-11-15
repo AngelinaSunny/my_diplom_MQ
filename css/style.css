@@ -20,15 +20,19 @@
 }
 
 /*-------------Общие стили--------------*/
+
+body {
+  padding-bottom: 44px;
+}
 /*шапка*/
 
 .link {
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 
 .link-nav {
-  font: 13px "OpenSans", sans-serif;
+  font-size: 0.8125rem;
   font-weight: 400;
   text-transform: uppercase;
 
@@ -60,7 +64,7 @@
   right: 0;
   bottom: 0;
 
-  background-color: #000000;
+  background-color: #000;
   opacity: 0.6;
   z-index: -1;
 }
@@ -68,17 +72,16 @@
 .logo-nav {
   display: flex;
   flex-wrap: wrap;
-  min-height: 40vh;
-  justify-content: center;
-  align-content: space-between;
 }
 
 .title-head {
+  margin-left: auto;
+  margin-right: auto;
+
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  margin-left: auto;
-  margin-right: auto;
+  font-weight: 700;
 }
 
 /*Общие стили в тренде*/
@@ -97,13 +100,16 @@
 
 .trend-post {
   align-items: flex-end;
-  width: 100%;
+}
+
+.title-trend {
+  color: #fff;
 }
 
 .trend-post-wrap {
   width: 91.66vw;
-  margin: 4.17vw;
   padding: 30px 20px;
+
   border: 3px solid #dcd2b8;
 }
 
@@ -111,13 +117,29 @@
 .trend-post,
 .teg,
 .title-news,
-.caption-new-post {
+.caption-new-post .popup-title {
   text-transform: uppercase;
 }
 
-.trend-header-title,
-.trend-post {
-  font-size: 1rem;
+.trend-header-title {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.trend-header-title::before {
+  content: "";
+  position: absolute;
+  width: 4.06em;
+
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  border-bottom: 3px solid #dcd2b8;
 }
 
 .teg {
@@ -134,6 +156,7 @@
 .main-tegs {
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 }
 
@@ -144,6 +167,7 @@
 .trend-post {
   position: relative;
   margin-bottom: 3px;
+  align-items: bottom;
 
   background-size: cover;
   background-position: center;
@@ -191,14 +215,36 @@
 .site-info,
 .index,
 .list-teg {
-  font: 0.75rem "Open Sans", sans-serif;
+  font: 0.75rem;
+}
+
+.teg,
+.caption,
+.list-topic {
+  font: 14px;
+  font-weight: 700;
+}
+.teg {
+  color: #b59f5b;
+}
+
+.main-tegs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.main-teg:not(:last-child) {
+  margin-right: 14px;
 }
 
 .data {
   margin-right: 10px;
 
   font-weight: 400;
-  color: #888888;
+  color: #888;
 }
 
 .name {
@@ -241,11 +287,11 @@
 }
 
 .data-new-post {
-  color: #888888;
+  color: #888;
 }
 
 .caption-new-post {
-  font: 14px/1.2 "Open Sans", sans-serif;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
@@ -255,6 +301,11 @@
   display: flex;
   margin-top: 55px;
   align-items: center;
+}
+
+.search-wrap {
+  display: flex;
+  flex-grow: 1;
 }
 
 .hydden-text-form {
@@ -267,13 +318,15 @@
 .search-input,
 .search-button,
 .email-input,
-.email-button {
+.email-button,
+.button-send {
   vertical-align: middle;
   outline: none;
   border: none;
 }
 
 .search-input {
+  flex-grow: 1;
   margin-right: 0;
   padding: 1px;
   background-color: #f4f7f6;
@@ -307,7 +360,8 @@
 }
 
 .email-input,
-.email-button {
+.email-button,
+.button-send {
   width: 100%;
 }
 
@@ -327,8 +381,9 @@
   color: #939594;
 }
 
-.email-button {
-  font: 14px/1.2 "Open Sans", sans-serif;
+.email-button,
+.button-send {
+  font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -336,7 +391,8 @@
   cursor: pointer;
 }
 
-.email-button:hover {
+.email-button:hover,
+.button-send:hover {
   background-color: #323232;
 }
 
@@ -349,22 +405,20 @@
 .list-tegs {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 17px;
+
   padding: 0;
-  justify-content: space-between;
 }
 
 .list-teg-link {
-  list-style-type: none;
   padding: 0;
-  margin-top: 7px;
+  list-style-type: none;
 }
 
 .list-teg {
   display: block;
   padding: 7px 13px;
 
-  border: 2px solid #eeeeee;
+  border: 2px solid #eee;
 
   font-weight: 700;
   text-transform: uppercase;
@@ -375,15 +429,13 @@
 }
 
 /*Общие стили список тем*/
-.topics {
-  margin-top: 60px;
-}
 
 .list-topics {
+  margin: 0;
   padding-top: 21px;
   padding-left: 0;
+
   list-style-type: none;
-  margin: 0;
 }
 
 .list-topic {
@@ -407,6 +459,62 @@
 
 /*Общие стили блок с товарами*/
 
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-wrap {
+  padding: 50px 25px 25px;
+  margin-top: -35px;
+  border: 3px solid #dcd2b8;
+}
+
+.price-byu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+}
+
+.title-product {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.text-product {
+  font-weight: 400;
+  font-size: 0.9375rem;
+}
+.shop-link {
+  color: #b59f5b;
+}
+.price-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.old-price {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: line-through;
+}
+.new-price {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.buy-button {
+  height: 45px;
+  width: 10em;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #b59f5b;
+  border: none;
+}
+
 /*общие стили подвал*/
 /*общие стили соцсети*/
 .footer-page {
@@ -425,9 +533,11 @@
 
 .socials {
   display: flex;
-  list-style-type: none;
+
   margin: 28px 0;
   padding: 0;
+
+  list-style-type: none;
 }
 
 .social-item:not(:last-child) {
@@ -471,6 +581,186 @@
   color: #888;
 }
 
+/*Попап общие стили*/
+.popup-wrap {
+  position: fixed;
+  display: flex;
+
+  top: 0px;
+  width: 100vw;
+  min-height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display: none;
+}
+
+.popup-close {
+  position: absolute;
+  top: -35px;
+  right: 0;
+
+  border: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.popup-form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+
+  width: 100%;
+  height: 100%;
+  padding: 30px 25px;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.popup-title {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  width: 100%;
+  padding-bottom: 12px;
+
+  text-transform: uppercase;
+}
+.popup-title::before {
+  content: "";
+  position: absolute;
+  width: 4.06em;
+
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  border-bottom: 3px solid #dcd2b8;
+}
+
+.question-select {
+  margin-top: 30px;
+
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+.select-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.select {
+  margin-top: 8px;
+  padding: 15px 18px;
+  flex-grow: 1;
+  font-size: 0.8125rem;
+  font-weight: 400;
+
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../svg/form-arrows.svg);
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  background-size: 7px 15px;
+
+  color: #9e9e9e;
+  cursor: pointer;
+}
+
+.select:focus {
+  border: 2px solid #b59f5b;
+}
+
+.select-option {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font: inherit;
+  padding: 0;
+  color: #9e9e9e;
+  border: none;
+}
+
+.question-radio {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+.radio-group-text {
+  padding-top: 18px;
+}
+
+.radio-btn {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.radio-group {
+  margin-top: 10px;
+  cursor: pointer;
+}
+.radio-group:nth-of-type(n + 2) {
+  margin-left: 34px;
+}
+
+.radio-group-text::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+
+  position: relative;
+
+  background-image: url(../svg/form-empty-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 24px;
+}
+
+.radio-btn:checked + .radio-group-text::before {
+  background-image: url(../svg/form-circle.svg);
+}
+
+.input-text {
+  background-color: #f4f7f6;
+  width: 100%;
+  min-height: 128px;
+  padding: 20px;
+  margin-top: 10px;
+
+  border: none;
+}
+
+.input-text:checked {
+  border: 1px solid #b59f5b;
+}
+
+.button-send {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 /*--------------мобильные телефоны-----------------*/
 
 @media (max-width: 640px) {
@@ -483,19 +773,28 @@
     background-image: url(../images/banner-mobile.jpg);
   }
 
-  .link-nav {
-    font-size: 0.8125rem;
-    margin-right: 9.3%;
-    display: none;
+  .navicon-svg {
+    margin-right: 4.2vw;
   }
 
-  .link-nav:nth-child(-n + 2) {
-    display: none;
+  .navicon {
+    order: -1;
+  }
+
+  .navigation {
+    width: 88.8vw;
+  }
+
+  .logo-nav {
+    min-height: 40vh;
+    justify-content: center;
+    align-content: space-between;
   }
 
   .logo {
     margin-bottom: 40px;
     width: 75vw;
+    align-self: center;
   }
 
   .title-head {
@@ -508,36 +807,25 @@
     min-height: 5.94em;
   }
 
-  .trend-header-title {
+  .trend-header-title,
+  .popup-title {
     font-size: 1rem;
     position: relative;
 
     padding-bottom: 12px;
   }
 
-  .trend-header-title::before {
-    content: "";
-    position: absolute;
-    width: 4.06em;
-
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-
-    margin-right: auto;
-    margin-left: auto;
-
-    border-bottom: 3px solid #dcd2b8;
-  }
-
   .trend-post {
-    min-height: 64vw;
+    min-height: 232px;
+    width: 100%;
     vertical-align: bottom;
   }
 
+  .trend-post-wrap {
+    margin: 4.17vw;
+  }
+
   .title-trend {
-    color: #fff;
     font-size: 1rem;
   }
 
@@ -585,8 +873,9 @@
 
   /* Мобилки новые посты*/
 
-  .caption {
-    margin-top: 45px;
+  .caption,
+  .caption-shop {
+    margin-top: 43px;
     font-size: 1rem;
   }
 
@@ -617,6 +906,14 @@
   .tegs {
     margin-top: 43px;
   }
+  .list-tegs {
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+
+  .list-teg-link {
+    margin-top: 7px;
+  }
 
   /*мобилки список тем*/
 
@@ -631,65 +928,16 @@
   /* мобилки список товаров */
 
   .product {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin-top: 20px;
   }
 
-  .product-wrap {
-    border: 3px solid #dcd2b8;
-    padding: 50px 25px 25px;
-    margin-top: -35px;
-  }
-
-  .price-byu {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 23px;
-  }
-
   .title-product {
-    margin-bottom: 1em;
     font-size: calc(17px / 1rem);
-    text-transform: uppercase;
   }
 
   .text-product {
     font-weight: 400;
-    font: 0.9375rem/2.3, "Open San" sans-serif;
-  }
-
-  .shop-link {
-    color: #b59f5b;
-  }
-
-  .price-product {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .old-price {
-    font-weight: 700;
-    font-size: 0.875rem;
-    text-decoration: line-through;
-  }
-
-  .new-price {
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-
-  .buy-button {
-    height: 45px;
-    width: 10em;
-    font: 0.875rem/1.2 "Open Sans", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #b59f5b;
-    border: none;
+    font-size: 0.9375rem;
   }
 
   /* подвал мобилки*/
@@ -702,11 +950,29 @@
   .footer-page {
     padding-bottom: 22.22vw;
   }
+
+  /*Попап мобилки*/
+  .popup-close {
+    width: 28px;
+  }
+  .popup-form {
+    height: 85.15vh;
+
+    width: 91.66vw;
+  }
 }
 
 /*-------------Мобильные в горизонтальной ориентации-----------*/
 
 @media (max-width: 640px) and (orientation: landscape) {
+  .trend-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .trend-post {
+    width: 49.5%;
+  }
 }
 
 /*---------------Мобилки и планшеты----------------*/
@@ -718,23 +984,143 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-
-    order: -1;
   }
 
   .navicon-svg {
-    margin-right: 4.2vw;
-    width: 7vw;
+    width: 25px;
   }
 
   .navigation {
     display: flex;
     justify-content: space-between;
-    width: 88.8vw;
   }
 
-  .logo {
-    align-self: center;
+  .link-nav {
+    margin-right: 9.3%;
+    font-size: 0.8125rem;
+    display: none;
+  }
+
+  .link-nav:nth-child(-n + 2) {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  /*Планшеты и ПК*/
+  /*Планшеты и ПК шапка*/
+  .logo-nav {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title-head {
+    width: 15.22em;
+    margin-top: 2.62em;
+  }
+  .trend-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .trend-post-wrap {
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .trend-post-title {
+    font-weight: 700;
+  }
+
+  /*Планшеты и ПК основной контент*/
+  .content,
+  .shop {
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .title-news {
+    margin-top: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .img-new-post {
+    margin-right: 18px;
+  }
+
+  .search-input,
+  .search-button,
+  .email-input,
+  .email-button {
+    height: 37px;
+  }
+
+  .search-button {
+    width: 37px;
+  }
+
+  /*Список тегов планшеты и ПК*/
+  .tegs {
+    margin-top: 60px;
+  }
+
+  .list-tegs {
+    margin-top: 25px;
+  }
+
+  .list-teg-link {
+    margin-right: 7px;
+    margin-bottom: 7px;
+  }
+
+  /*Список тем планшеты и ПК*/
+
+  .topics {
+    margin-top: 60px;
+  }
+
+  .list-topics {
+    padding-top: 21px;
+  }
+
+  /* Блок с товарами планшеты и ПК*/
+  .shop {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .caption-shop {
+    font-size: 1.25rem;
+    width: 100%;
+  }
+
+  .product {
+    margin-top: 25px;
+  }
+
+  /*Footer планшеты*/
+  .adress {
+    margin-top: 61px;
+  }
+
+  .site-info {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 69px;
+  }
+
+  /*Попап планшеты и ПК*/
+
+  .popup-form {
+    width: 390px;
+    min-height: 590px;
   }
 }
 
@@ -744,13 +1130,132 @@
   /*шапка*/
 
   .main-header {
+    padding-top: 42px;
+    padding-bottom: 125px;
     background-image: url(../images/banner-bg-tablet.jpg);
+  }
+  .navicon-svg {
+    margin-right: 35px;
+  }
+
+  .logo-nav {
+    width: 90vw;
+  }
+
+  .logo {
+    width: 158px;
+  }
+
+  .title-head {
+    font-size: 2.5rem;
+  }
+
+  /*В тренде планшеты*/
+  .trend-header {
+    margin-top: 43px;
+    margin-bottom: 20px;
+  }
+
+  .trend-header-title,
+  .trend-post .tpopup-title {
+    font-size: 1.125rem;
+  }
+
+  .trend-wrap {
+    flex-wrap: wrap;
+  }
+
+  .trend-post {
+    width: 49.74%;
+    min-height: 246px;
+  }
+
+  .trend-post-title {
+    margin-top: 15px;
+    font-size: 1.0625rem;
+  }
+
+  .title-trend {
+    font-size: 1.0625rem;
+  }
+
+  /*Основной контент планшеты*/
+
+  .content,
+  .shop {
+    margin-top: 50px;
+    width: 91.14vw;
+  }
+
+  .posts {
+    width: 55.72%;
+  }
+
+  .aside {
+    width: 38.85%;
+  }
+
+  .post:not(:last-child) {
+    border-bottom: 3px solid #dcd2b8;
+  }
+
+  .post:nth-child(n + 2) {
+    margin-top: 35px;
+  }
+
+  .main-tegs {
+    margin-top: 16px;
+  }
+
+  .title-news {
+    margin-bottom: 37px;
+
+    font-size: 1.0625rem;
+  }
+
+  .text-news-inner {
+    margin-top: 37px;
+    margin-bottom: 20px;
+  }
+
+  .text-news {
+    font-size: 0.9375rem;
+  }
+
+  /*новые посты планшеты*/
+  .caption {
+    font-size: 1.125rem;
+  }
+
+  .product {
+    width: 48.35%;
+  }
+
+  .product-wrap {
+    min-height: 260px;
+  }
+
+  .title-product {
+    font-size: calc(17px / 1rem);
+  }
+
+  /*Попап планшеты*/
+  .popup-close {
+    width: 28px;
   }
 }
 
 /*--------------планшеты в горизонтальной ориентации-----------*/
 
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+  .trend-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .trend-post {
+    width: 24.8%;
+  }
 }
 
 /*----------------декстоп-----------------*/
@@ -763,5 +1268,219 @@
     padding-bottom: 145px;
 
     background-image: url(../images/banner-bg.jpg);
+  }
+
+  .navicon-svg {
+    display: none;
+  }
+
+  .logo-nav {
+    width: 70.5vw;
+  }
+
+  .logo {
+    width: 179px;
+  }
+
+  .link-nav:nth-child(n + 2) {
+    margin-left: 34px;
+  }
+
+  .title-head {
+    font-size: 2.8125rem;
+  }
+
+  /*В тренде*/
+  .trend-header-title,
+  .trend-post,
+  .title-trend,
+  .trend-post-title,
+  .popup-title {
+    font-size: 1.25rem;
+  }
+
+  .trend-header {
+    min-height: 6.1em;
+  }
+
+  .trend-post {
+    width: 24.7%;
+    min-height: 320px;
+  }
+
+  .trend-post-title {
+    margin-top: 15px;
+  }
+
+  /*Основной контент*/
+
+  .content,
+  .shop {
+    margin-top: 63px;
+    width: 73.125vw;
+  }
+
+  .posts {
+    width: 67.35%;
+  }
+
+  .aside {
+    width: 23.25%;
+  }
+
+  .post {
+    display: flex;
+  }
+
+  .post:nth-child(n + 2) {
+    margin-top: 57px;
+  }
+
+  .image-post {
+    margin-right: 30px;
+    width: 368px;
+    align-items: flex-start;
+  }
+  .main-tegs {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+  }
+
+  .main-teg:not(:last-child) {
+    margin-right: 14px;
+  }
+
+  .teg {
+    text-transform: uppercase;
+    color: #b59f5b;
+    font-weight: 700;
+  }
+
+  .teg:hover {
+    border-bottom: 2px solid #dcd2b8;
+  }
+
+  .text-newses {
+    display: block;
+  }
+
+  .title-news {
+    margin-bottom: 23px;
+
+    font-size: 1.25rem;
+  }
+
+  .title-news > .link:hover {
+    color: #b59f5b;
+  }
+
+  .data,
+  .name,
+  .data-new-post,
+  .site-info,
+  .index,
+  .list-teg {
+    font-size: 0.75rem;
+  }
+
+  .data {
+    margin-right: 10px;
+
+    font-weight: 400;
+    color: #888;
+  }
+
+  .name {
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  .text-news-inner {
+    margin-top: 50px;
+  }
+
+  .text-news {
+    font-size: 0.9375rem;
+  }
+
+  .caption {
+    position: relative;
+    margin: 0;
+    padding-bottom: 15px;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .caption::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 14px;
+
+    width: 61px;
+    border-bottom: 3px solid #e1d9bd;
+  }
+
+  .container {
+    display: flex;
+    margin-top: 22px;
+  }
+
+  .img-new-post {
+    width: 70px;
+  }
+
+  .data-new-post {
+    color: #888;
+  }
+
+  .caption-new-post {
+    padding-top: 3px;
+    margin: 0;
+
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .caption-new-post > .link:hover {
+    color: #b59f5b;
+  }
+
+  /* Блок с товарами ПК*/
+
+  .product-wrap {
+    min-height: 265px;
+  }
+
+  .product {
+    width: 27.7%;
+  }
+
+  .title-product {
+    font-size: 1.25rem;
+  }
+  /*footer ПК*/
+
+  .footer-page {
+    padding-bottom: 34px;
+
+    width: 1170px;
+  }
+
+  /*Попап ПК*/
+  .popup-close {
+    width: 21px;
   }
 }
